@@ -14,6 +14,7 @@
     --violet-deep:#3a0f8f;
     --violet-mid:#6d28d9;
     --violet-bright:#8b5cf6;
+    --blue:#3b82f6;
     --fuchsia:#d946ef;
     --cyan:#22d3ee;
     --gold:#facc15;
@@ -178,6 +179,7 @@
   .wa-button:nth-child(1){ animation-delay:0s; }
   .wa-button:nth-child(2){ animation-delay:-1.6s; }
   .wa-button:nth-child(3){ animation-delay:-3.2s; }
+  .wa-button:nth-child(4){ animation-delay:-2.4s; }
 
   @keyframes floatBtn{
     0%,100%{ transform:translateY(0); }
@@ -193,6 +195,15 @@
       linear-gradient(180deg, #ffffff, #ecfeff) padding-box,
       linear-gradient(135deg, #67e8f9, var(--cyan), #0891b2) border-box;
     box-shadow:0 14px 30px rgba(34,211,238,0.5), inset 0 1px 0 rgba(255,255,255,0.8);
+  }
+
+  .wa-button.glow-blue{
+    padding:19px 18px;
+    border:2px solid transparent;
+    background:
+      linear-gradient(180deg, #ffffff, #eff6ff) padding-box,
+      linear-gradient(135deg, #93c5fd, var(--blue), #1d4ed8) border-box;
+    box-shadow:0 14px 30px rgba(59,130,246,0.5), inset 0 1px 0 rgba(255,255,255,0.8);
   }
 
   .wa-button.glow-violet{
@@ -226,6 +237,7 @@
   .wa-button:nth-child(1)::after{ animation-delay:0.3s; }
   .wa-button:nth-child(2)::after{ animation-delay:1.1s; }
   .wa-button:nth-child(3)::after{ animation-delay:1.9s; }
+  .wa-button:nth-child(4)::after{ animation-delay:2.7s; }
 
   @keyframes btnShine{
     0%{ left:-120%; }
@@ -253,6 +265,7 @@
   }
 
   .glow-cyan .wa-icon-wrap::before{ background:var(--cyan); }
+  .glow-blue .wa-icon-wrap::before{ background:var(--blue); }
   .glow-violet .wa-icon-wrap::before{ background:var(--violet-bright); }
   .glow-fuchsia .wa-icon-wrap::before{ background:var(--fuchsia); }
 
@@ -275,6 +288,12 @@
     border-color:#67e8f9;
     background:radial-gradient(circle at 32% 28%, rgba(34,211,238,0.55), rgba(10,6,20,0.92));
     box-shadow:0 0 10px rgba(34,211,238,0.55);
+  }
+
+  .glow-blue .wa-icon{
+    border-color:#93c5fd;
+    background:radial-gradient(circle at 32% 28%, rgba(59,130,246,0.55), rgba(10,6,20,0.92));
+    box-shadow:0 0 10px rgba(59,130,246,0.55);
   }
 
   .glow-violet .wa-icon{
@@ -474,7 +493,7 @@
   </div>
 
   <div class="cta-section">
-    <div class="cta-title">Elegí tu plataforma y <span class="accent">PEDÍ TU USUARIO</span> ahora mismo</div>
+    <div class="cta-title">Elegí tu plataforma y <span class="accent">PEDÍ TU USUARIO</span> — hoy te damos el <span class="accent">20%</span> extra</div>
 
     <div class="buttons">
       <a id="btn-bet30" class="wa-button glow-cyan" href="#" target="_blank" rel="noopener">
@@ -490,7 +509,7 @@
         <span class="btn-arrow">›</span>
       </a>
 
-      <a id="btn-ganamos" class="wa-button glow-violet" href="#" target="_blank" rel="noopener">
+      <a id="btn-ganamos" class="wa-button glow-blue" href="#" target="_blank" rel="noopener">
         <span class="wa-icon-wrap">
           <span class="wa-icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M17.4 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7 3.2 1.3 3.2.9 3.8.8.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z" fill="currentColor"/><path d="M12 2.5C6.8 2.5 2.5 6.7 2.5 12c0 1.8.5 3.5 1.4 5L2.5 21.5l4.6-1.4c1.4.8 3.1 1.2 4.9 1.2 5.2 0 9.5-4.2 9.5-9.5S17.2 2.5 12 2.5zm0 17.2c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3 .9.9-2.9-.2-.3c-.9-1.4-1.4-3-1.4-4.7 0-4.5 3.7-8.2 8.2-8.2 4.5 0 8.2 3.7 8.2 8.2s-3.7 8.2-8.2 8.2z" fill="currentColor" opacity="0.55"/></svg>
@@ -503,14 +522,27 @@
         <span class="btn-arrow">›</span>
       </a>
 
-      <a id="btn-mayuplay" class="wa-button glow-fuchsia" href="#" target="_blank" rel="noopener">
+      <a id="btn-mayuplay" class="wa-button glow-violet" href="#" target="_blank" rel="noopener">
         <span class="wa-icon-wrap">
           <span class="wa-icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M17.4 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7 3.2 1.3 3.2.9 3.8.8.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z" fill="currentColor"/><path d="M12 2.5C6.8 2.5 2.5 6.7 2.5 12c0 1.8.5 3.5 1.4 5L2.5 21.5l4.6-1.4c1.4.8 3.1 1.2 4.9 1.2 5.2 0 9.5-4.2 9.5-9.5S17.2 2.5 12 2.5zm0 17.2c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3 .9.9-2.9-.2-.3c-.9-1.4-1.4-3-1.4-4.7 0-4.5 3.7-8.2 8.2-8.2 4.5 0 8.2 3.7 8.2 8.2s-3.7 8.2-8.2 8.2z" fill="currentColor" opacity="0.55"/></svg>
           </span>
         </span>
         <span class="btn-text">
-          <div class="btn-title">MAYUPLAY</div>
+          <div class="btn-title">STARGAME</div>
+          <div class="btn-sub"><span class="live-dot"></span>Respuesta inmediata</div>
+        </span>
+        <span class="btn-arrow">›</span>
+      </a>
+
+      <a id="btn-plataforma4" class="wa-button glow-fuchsia" href="#" target="_blank" rel="noopener">
+        <span class="wa-icon-wrap">
+          <span class="wa-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M17.4 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7 3.2 1.3 3.2.9 3.8.8.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z" fill="currentColor"/><path d="M12 2.5C6.8 2.5 2.5 6.7 2.5 12c0 1.8.5 3.5 1.4 5L2.5 21.5l4.6-1.4c1.4.8 3.1 1.2 4.9 1.2 5.2 0 9.5-4.2 9.5-9.5S17.2 2.5 12 2.5zm0 17.2c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3 .9.9-2.9-.2-.3c-.9-1.4-1.4-3-1.4-4.7 0-4.5 3.7-8.2 8.2-8.2 4.5 0 8.2 3.7 8.2 8.2s-3.7 8.2-8.2 8.2z" fill="currentColor" opacity="0.55"/></svg>
+          </span>
+        </span>
+        <span class="btn-text">
+          <div class="btn-title">THOR</div>
           <div class="btn-sub"><span class="live-dot"></span>Respuesta inmediata</div>
         </span>
         <span class="btn-arrow">›</span>
@@ -553,19 +585,42 @@
   const lines = [
     "5491165864984",
     "5491125044104",
-    "5493518192911"
+    "5493518192911",
+    "5491123799500"
   ];
 
-  // Mensaje fijo por botón (siempre depende del botón, nunca de la línea que le toque)
-  const messages = {
-    bet30:    "Quiero un usuario en BET30",
-    ganamos:  "Quiero un usuario en GANAMOS",
-    mayuplay: "Quiero un usuario en MAYUPLAY"
+  // Nombre de cada plataforma (se inserta en las variantes de mensaje)
+  const platformNames = {
+    bet30:        "BET30",
+    ganamos:      "GANAMOS",
+    mayuplay:     "STARGAME",
+    plataforma4:  "THOR"
   };
+
+  // Variantes de mensaje: se elige una al azar en cada clic, para que no
+  // todos los visitantes manden el mismo texto (evita que WhatsApp lo
+  // marque como spam por repetición).
+  const messageTemplates = [
+    "Hola! Quiero cargar en {plataforma}",
+    "Quiero un usuario en {plataforma}",
+    "Me armás porfa un usuario en {plataforma}?",
+    "Quiero jugar en {plataforma}, mi nombre es ",
+    "Hola, vengo por {plataforma} 👋 ¿Me armás usuario?",
+    "Buenas, quiero jugar en {plataforma}",
+    "Me hacés un usuario en {plataforma}, dale?",
+    "Hola, para cargar en {plataforma}",
+    "Quiero probar en {plataforma}",
+    "Hola, me pasás los datos para jugar en {plataforma}?"
+  ];
+
+  function pickMessage(key){
+    const template = messageTemplates[Math.floor(Math.random() * messageTemplates.length)];
+    return template.replace('{plataforma}', platformNames[key]);
+  }
 
   // Contadores en memoria local — arrancan en 0 y se actualizan apenas
   // carga la página (sin bloquear nada) y de forma optimista en cada clic
-  let localCounts = [0, 0, 0];
+  let localCounts = [0, 0, 0, 0];
   let countsReady = false;
 
   // Al cargar la página: pedimos los contadores reales en segundo plano.
@@ -599,7 +654,7 @@
     // 1) Decisión instantánea, sin red — 0ms
     const idx = pickLineIndex();
     const number = lines[idx];
-    const link = buildLink(number, messages[key]);
+    const link = buildLink(number, pickMessage(key));
 
     // 2) Redirige ya mismo
     window.open(link, '_blank', 'noopener');
@@ -616,6 +671,7 @@
   document.getElementById('btn-bet30').addEventListener('click', (e) => handleClick(e, 'bet30'));
   document.getElementById('btn-ganamos').addEventListener('click', (e) => handleClick(e, 'ganamos'));
   document.getElementById('btn-mayuplay').addEventListener('click', (e) => handleClick(e, 'mayuplay'));
+  document.getElementById('btn-plataforma4').addEventListener('click', (e) => handleClick(e, 'plataforma4'));
 </script>
 </body>
 </html>
